@@ -1,0 +1,91 @@
+DAY 01
+
+  Amazon S3 (Simple Storage Service) Basics
+
+1. What is Amazon S3?
+
+Amazon S3 is an object storage service that offers scalability, security, and data availability.
+It allows you to store and retrieve any amount of data, at any time, from anywhere on the web.
+S3 is commonly used for backup, disaster recovery, data archiving, and big data analytics.
+
+2. Key Features of S3:
+
+Durability: Designed for 99.999999999% (11 9's) durability.
+Scalability: Automatically scales storage based on your needs.
+Security: Integrated with AWS Identity and Access Management (IAM), supports encryption at rest and in transit.
+Low Cost: You only pay for the storage you actually use.
+
+3. What is an S3 Bucket?
+
+A bucket is a container for storing objects (files) in Amazon S3.
+You create a bucket in a specific region, and all objects are stored within it.
+Buckets have globally unique names across all AWS accounts.
+
+4. Key Concepts of S3 Buckets:
+
+Objects: The actual files you store in S3 (e.g., images, videos, documents). Each object can be up to 5TB in size.
+Keys: The name of the object. Every object within a bucket has a unique key that acts as its identifier.
+Regions: S3 buckets are created in specific regions to optimize latency and costs. However, you can access your data globally.
+Storage Classes: Different classes like Standard, Infrequent Access, and Glacier, depending on the access frequency and cost considerations.
+
+5. How to Create an S3 Bucket:
+
+Login to AWS Console and navigate to the S3 dashboard.
+Click “Create Bucket” and specify a globally unique bucket name.
+Choose the Region where the bucket will be created.
+Set Permissions (Public/Private access) and apply any bucket policies or access control.
+Configure other settings such as versioning, logging, and encryption.
+Click Create to finish the process.
+
+6. Managing S3 Bucket Permissions:
+
+By default, new buckets are private. You can manage permissions in several ways:
+Bucket Policies: JSON policies that allow you to control access at the bucket level.
+Access Control Lists (ACLs): Specify permissions at the object or bucket level.
+IAM Policies: Manage access using IAM roles and policies for fine-grained access control.
+7. S3 Storage Classes:
+
+S3 Standard: For frequently accessed data. High availability and low latency.
+S3 Intelligent-Tiering: Automatically moves objects to the most cost-effective storage tier based on access patterns.
+S3 Standard-IA (Infrequent Access): For data that is accessed less frequently but still needs to be quickly accessible.
+S3 Glacier & Glacier Deep Archive: For long-term archive storage, with retrieval times ranging from minutes to hours.
+8. Versioning in S3:
+
+S3 supports versioning, allowing you to keep multiple versions of an object in the same bucket.
+It helps with data recovery in case of accidental overwrites or deletions.
+
+AWS Relational Database Service (RDS):
+
+Amazon RDS is a fully managed relational database service that makes it easier to set up, operate, and scale a relational database in the cloud.
+RDS supports several popular RDBMS engines:
+Amazon Aurora (a highly optimized MySQL and PostgreSQL-compatible RDBMS)
+MySQL
+
+
+key Features of Amazon RDS:
+
+Managed Infrastructure: AWS handles routine database tasks like backups, patching, and scaling.
+Automated Backups and Snapshots: Built-in automated backups and database snapshots help restore databases at any point in time.
+High Availability: Amazon RDS can be configured to use Multi-AZ deployments for automatic failover and enhanced availability.
+Read Replicas: For read-heavy workloads, RDS supports creating read replicas in the same or different regions.
+Performance Monitoring: Tools like Amazon CloudWatch and Enhanced Monitoring provide real-time metrics to monitor performance.
+Security: Integrated with AWS Identity and Access Management (IAM), VPC for network isolation, and encryption options for data at rest and in transit.
+
+
+ Benefits of Using RDS:
+
+Scalability: You can vertically scale your database by upgrading the instance size or add read replicas for horizontal scaling of read traffic.
+Cost Efficiency: You only pay for what you use. RDS offers On-Demand pricing or Reserved Instances for long-term savings.
+Security: With built-in encryption using AWS KMS, you can secure your database and comply with industry regulations.
+Automatic Failover and Recovery: With Multi-AZ deployments, failover happens automatically if a database instance becomes unavailable.
+
+
+Amazon DynamoDB
+1. What is DynamoDB?
+
+Amazon DynamoDB is a fully managed, serverless, key-value and document NoSQL database service designed for high-performance, scalable applications.
+It is known for low-latency and high throughput, making it suitable for applications requiring rapid access to large amounts of data.
+2. Key Features of DynamoDB:
+3. NoSQL Database: DynamoDB is a NoSQL database, which means it doesn't use the relational model of tables, rows, and columns like traditional RDBMS systems.
+Key-Value Store: Data is stored as key-value pairs, where each key corresponds to a unique value (item).
+Document Store: DynamoDB also supports document data models, allowing you to store semi-structured data such as JSON, XML, or HTML.
